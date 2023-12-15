@@ -1,16 +1,13 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        Long a, b, c;
+        long a = scanner.nextLong();
+        long b = scanner.nextLong();
+        long c = scanner.nextLong();
 
-        a = sc.nextLong(); b = sc.nextLong(); c = sc.nextLong();
-
-        System.out.println(a + b + c);
-
-        sc.close();
-
+        System.out.println(a+b+c);
     }
 }
