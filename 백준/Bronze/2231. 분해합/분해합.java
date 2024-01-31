@@ -6,26 +6,27 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int num = Integer.parseInt(br.readLine());
+        String line = br.readLine();
+        int len = line.length();
 
-        for(int i=1; i<=num; i++) {
+        int num = Integer.parseInt(line);
+        int result = 0;
+
+        for(int i= num - (len * 9); i<=num; i++) {
             int temp = i;
-            int sum = temp;
+            int sum = 0;
 
             while(temp > 0) {
                 sum += temp % 10;
                 temp /= 10;
             }
 
-            if(sum == num) {
-                System.out.println(i);
-                break;
-            }
-
-            if(i == num) {
-                System.out.println(0);
+            if(sum + i == num) {
+                result = i;
                 break;
             }
         }
+
+        System.out.println(result);
     }
 }
